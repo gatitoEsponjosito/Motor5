@@ -7,7 +7,6 @@ private:
 	float y;
 	int width;
 	int height;
-	float vertexData;
 	GLuint vboID;
 public:
 	Sprite();

@@ -1,5 +1,7 @@
 #include"MainGame.h"
+#include<iostream>
 #include"Error.h"
+using namespace std;
 MainGame::MainGame() {
 	window = nullptr;
 	width = 800;
@@ -26,7 +28,6 @@ void MainGame::init() {
 	}
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-
 }
 
 void MainGame::draw() {

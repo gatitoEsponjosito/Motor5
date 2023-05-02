@@ -83,7 +83,7 @@ void HLSLProgram::linkShader(){
 		vector<GLchar> infoLog(maxLength);
 		glGetProgramInfoLog(programID, maxLength, &maxLength, &infoLog[0]);
 		glDeleteProgram(programID);
-		fatalError("Shaders could not link " + printf("%s", &*(infoLog[0])));
+		fatalError("Shaders could not link " + printf("%s", &(infoLog[0])));
 		glDeleteShader(vertexShaderID);
 		glDeleteShader(fragmentShaderID);
 		return;
