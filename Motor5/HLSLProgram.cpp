@@ -42,9 +42,6 @@ void HLSLProgram::compilerShader(const string& shaderPath, GLuint id){
 	}
 }
 
-
-
-
 void HLSLProgram::addAtribute(const string attributeName){
 
 }

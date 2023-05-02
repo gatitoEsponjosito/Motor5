@@ -13,6 +13,7 @@ private:
 	SDL_Window* window;
 	void init();
 	Sprite sprite;
+	Sprite sprite2;
 	void processInput();
 
 public:
