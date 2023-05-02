@@ -12,6 +12,7 @@ MainGame::~MainGame() {
 }
 
 void MainGame::init() {
+	t = clock();
 	SDL_Init(SDL_INIT_EVERYTHING);
 	window = SDL_CreateWindow("Hola", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
 		width, height, SDL_WINDOW_OPENGL);
@@ -26,13 +27,15 @@ void MainGame::init() {
 	}
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-
+	sprites.push_back(Sprite());
+	sprites.push_back(Sprite());
 }
 
 void MainGame::draw() {
 	glClearDepth(1.0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	sprite.draw();
+	sprites[0].draw();
+	sprites[1].draw();
 	// si tengo elementos actualizados
 	SDL_GL_SwapWindow(window);
 }
@@ -53,7 +56,8 @@ void MainGame::processInput() {
 
 void MainGame::run() {
 	init();
-	sprite.init(-1, -1, 1, 1);
+	sprites[0].init(1, 1, -1, -1);
+	sprites[1].init(-1, -1, 1, 1);
 	update();
 }
 
