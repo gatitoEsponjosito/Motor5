@@ -17,6 +17,7 @@ private:
 	void init();
 	vector<Sprite> sprites;
 	void processInput();
+	void addsquare();
 
 public:
 	MainGame();

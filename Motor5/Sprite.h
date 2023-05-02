@@ -5,13 +5,13 @@ class Sprite {
 private:
 	float x;
 	float y;
-	int width;
-	int height;
+	float width;
+	float height;
 	float vertexData;
 	GLuint vboID;
 public:
 	Sprite();
 	~Sprite();
-	void init(float x, float y, int with, int height);
+	void init(float x, float y, float with, float height);
 	void draw();
 };
