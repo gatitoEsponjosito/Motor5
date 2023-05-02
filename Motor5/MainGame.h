@@ -2,6 +2,8 @@
 #include<SDL/SDL.h>
 #include<GL/eglew.h>
 #include"Sprite.h"
+#include<iostream>
+#include<vector>
 enum class GameState {
 	PLAY, EXIT
 };
@@ -12,8 +14,7 @@ private:
 	int height;
 	SDL_Window* window;
 	void init();
-	Sprite sprite;
-	Sprite sprite2;
+	vector<Sprite> sprites;
 	void processInput();
 
 public:
